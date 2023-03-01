@@ -1,0 +1,161 @@
+@import url(https://fonts.googleapis.com/css?family=Kumbh+Sans:100,200,300,regular,500,600,700,800,900);
+
+
+
+/** RESET **/
+
+/* root reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+/* custom rem */
+:root {
+  font-size: 62.5%;
+}
+
+html {
+  min-width: min-content;
+}
+
+/* selectors reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  overflow-wrap: break-word;
+  text-rendering: optimizeSpeed;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  height: auto;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+a,
+a:hover,
+a:focus,
+a:visited,
+a:active {
+  text-decoration: none;
+  color: inherit;
+  text-decoration-skip-ink: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  display: inline-block;
+  font: inherit;
+  border: none;
+  outline: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+/** CUSTOM VARIABLES **/
+
+:root {
+
+  /* colors */
+  --bg-body: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
+  --c-headings: hsl(237, 12%, 33%);
+  --c-body: hsl(240, 6%, 50%);
+  --c-highlight-text: hsl(14, 88%, 65%);
+  --divider: hsl(240, 5%, 91%);
+
+  --white: hsl(0, 0%, 100%);
+
+  /** typography **/
+
+  /* font family */
+  --ff: 'Kumbh Sans', sans-serif;
+
+  /* font weight */
+  --fw-300: 300;
+  --fw-400: 400;
+  --fw-700: 700;
+
+  /* font size */
+  --fs-h1: clamp(2.8rem, 2.6592rem + 0.3756vw, 3.2rem);
+  --fs-p: clamp(1.2rem, 1.1296rem + 0.1878vw, 1.4rem);
+
+  /* line height */
+  --lh: 1.5;
+
+  /* border radius */
+  --br-10px: 0.625rem;
+  --br-20px: 1.25rem;
+
+  /* z-index */
+  --z-index-front: 10;
+  --z-index-middle: 5;
+  --z-index-back: 1;
+}
+
+
+/** GLOBAL UTILITIES **/
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+
+  /* centered layout */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+
+  /* typography */
+  font-family: var(--ff);
+  font-weight: var(--fw-400);
+  font-size: var(--fs-p);
+  line-height: var(--lh);
+
+  /* color */
+  background: var(--bg-body);
+  color: var(--c-body);
+
+}
