@@ -15,4 +15,5 @@
 .DS_Store
 
 .prettierignore
-.vscodeignore
+.vscode/
+**/.vscode/*
